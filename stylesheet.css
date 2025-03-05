@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    background-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.navA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navA a {
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.nav a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.9s;
+}
+
+.navA a:hover::before {
+    width: 100%;
+}
+
+.navA a:hover{
+    transform: translateY(-8px);
+    transition: 0.9s;
+}
+
+.nav input {
+    display: none;
+}
+
+#aacha {
+    display: none;
+    font-size: 20px;
+}
+
+#click:checked ~ .navA {
+    left: -100%;
+    transition: 1s;
+}
+
+@media screen and (max-width:980px) and (min-width:320px) {
+    .navA {
+        position: fixed;
+        background-color: lightgray;
+        width: 100%;
+        height: 45vh;
+        top: 80px;
+        left: 0%;
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin: 0;
+        transition: 0.9s;
+        z-index: 999;
+        flex-direction: column;
+    }
+
+    #aacha {
+        display: block;
+        font-size: 30px;
+    }
+
+    .nav {
+        justify-content: space-between;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:400px) and (min-width:320px) {
+    .nav h1{
+        font-size: 20px;
+    }
+}
+
+/* =================================== */
+/* <!---------homediv-------1---------> */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/emty.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hometop{
+    width: 100%;
+    height: 50vh;
+    padding-top: 130px;
+}
+
+.homebottom{
+    width: 100%;
+    height: 50vh;
+    background-image: url(./images/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 65%;
+}
+
+.hometop h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255 106 0);
+}
+
+.hometop p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.hometop div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hometop div button{
+    width: 120px;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:730px) and (min-width:570px) {
+    .hometop h1{
+        font-size: 40px;
+    }
+    .hometop p{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:570px) and (min-width:450px) {
+    .hometop h1{
+        font-size: 30px;
+    }
+    .hometop p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:450px) and (min-width:320px) {
+    .homebottom{
+        background-position: -100px;
+    }
+    .hometop h1{
+        font-size: 25px;
+    }
+    .hometop p{
+        font-size: 8px;
+    }
+}
+
+/* ======================================== */
+/* <!-------------shopdiv----------2---------> */
+
+.shop{
+    width: 100%;
+    min-height: 70vh;
+    background-color: antiquewhite;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.shopbox1{
+    width: 250px;
+}
+
+.shopbox1 p{
+    margin-top: 10px;
+    line-height: 22px;
+}
+
+.shopbox1 button{
+    width: 100px;
+    height: 5vh;
+    background-color: black;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.shopbox2{
+    width: 270px;
+    height: 350px;
+}
+
+.shopbox2 img{
+    width: 270px;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.shopbox2 h3{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:600px) and (min-width:320px) {
+    .shop{
+        row-gap: 20px;
+    }
+}
+
+/* =================================== */
+/* <!----------fladiv---------3-----------> */
+
+.fla{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fla1{
+    width: 315px;
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.fla1 h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fla1 p{
+    text-align: center;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.fla2{
+    width: 315px;
+    height: 300px;
+    background-color: whitesmoke;
+}
+
+.fla3{
+    width: 315px;
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 40px 20px 20px 20px ;
+}
+
+.fla3 p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.fla4{
+    width: 315px;
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.fla4 h2{
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+
+.fla4 button{
+    width: 150px;
+    height: 5vh;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+.fla2 img{
+    width:315px;
+    height:300px;
+    object-fit: cover;
+}
+
+/* ================================== */
+/* <!----------smalldiv------4----------> */
+
+.smal{
+    width: 100%;
+    min-height: 70vh;
+    background-color: whitesmoke;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smalleft{
+    width: 50%;
+    height: 40vh;
+}
+
+.smalright{
+    width: 50%;
+    height: 65vh;
+    padding: 30px;
+}
+
+.smalright img{
+    width: 100%;
+    height: 56vh;
+    object-fit: cover;
+}
+
+.smalleft div h1{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.smalleft div p{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.smalleft div button{
+    width: 150px;
+    height: 5vh;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width:750px) and (min-width:460px) {
+    .smal{
+        flex-direction: column;
+    }
+    .smalright{
+        width: 100%;
+    }
+    .smalleft{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:460px) and (min-width:320px) {
+    .smal{
+        flex-direction: column;
+    }
+    .smalright{
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .smalleft{
+        width: 100%;
+    }
+    .smalleft div p{
+        font-size: 12px;
+    }
+    .smalleft div h1{
+        font-size: 24px;
+    }
+}
+
+/* ========================================= */
+/* <!-----------icondiv---------5-------------> */
+
+.icon{
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.icon1{
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+}
+
+.icon1 i{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.icon1 h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:700px) and (min-width:320px) {
+    .icon{
+        row-gap: 30px;
+    }
+}
+
+/* ====================================== */
+/* <!-------------footerdiv----------------> */
+
+.footer{
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.footer  h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.footerflex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerleft{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.footerleft img{
+    width: 500px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.footerright{
+    width: 50%;
+    padding: 20px 50px 20px 20px;
+}
+
+.footerright h2{
+    margin-bottom: 20px;
+}
+
+.footerright ul{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.footerright li{
+    margin-top: 10px;
+}
+
+.footerright button{
+    width: 120px;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:980px) and (min-width:600px) {
+    .footerflex{
+        flex-direction: column;
+    }
+    .footerleft{
+        width: 100%;
+        justify-content: center;
+    }
+    .footerright{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) and (min-width:320px) {
+    .footerflex{
+        flex-direction: column;
+    }
+    .footer h1{
+        font-size: 30px;
+    }
+    .footerleft{
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+    .footerleft img{
+        width: 300px;
+        height: 350px;
+    }
+    .footerright{
+        width: 100%;
+    }
+}
+
+/* ======================================== */
+/* <!------------lastdiv------------------> */
+
+.last{
+    width: 100%;
+    min-height: 60vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.last div{
+    width: 300px;
+}
+
+.last div h1{
+    color: white;
+    font-size: 40px;
+}
+
+.last div p{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.last div h2{
+    color: white;
+}
+
+@media screen and (max-width:1180px) and (min-width:320px) {
+    .last{
+        row-gap: 40px;
+    }
+}
